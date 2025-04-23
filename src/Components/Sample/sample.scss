@@ -1,0 +1,30 @@
+@import '../../Sass/variables.scss';
+@import '../../Sass/mixin.scss';
+@import '../../Sass/animations.scss';
+
+
+// Footer =============================
+
+// Footer ends ========================
+
+
+
+// Media Queries=====================================================
+
+$xs: 320px;
+$sm: 480px;
+$md: 767px;
+$lg: 1024px;
+$xl: 1920px;
+
+@media (min-width: $xs) and (max-width: $sm) and (orientation: portrait) {}
+
+@media (min-width: 481px) and (max-width: $md) and (orientation: landscape) {}
+
+@media (min-width: 481px) and (max-width: $md) and (orientation: portrait) {}
+
+@media (min-width: 768px) and (max-width: $lg) and (orientation: landscape) {}
+
+@media (min-width: 768px) and (max-width: $lg) and (orientation: portrait) {}
+
+@media (min-width: 1025px) and (max-width: $xl) {}

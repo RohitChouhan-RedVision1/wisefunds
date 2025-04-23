@@ -1,0 +1,389 @@
+@import '../../Sass/variables.scss';
+@import '../../Sass/mixin.scss';
+@import '../../Sass/animations.scss';
+@import url('https://fonts.googleapis.com/css2?family=Maname&display=swap');
+
+.harness,.harness-laptop {
+    // padding: 0 5% 5% 5%;
+    background: #fff;
+    // background: $gradient;
+    // border-radius: 0 100px 100px 0;
+    // margin-right: 5%;
+    // box-shadow: $boxShadow;
+    // overflow: hidden;
+
+    .harness-body {
+        width: 100%;
+        height: 320vh;
+        // position: relative;
+
+        .title {
+            text-align: center;
+            padding-bottom: 0.7em;
+            position: relative;
+            text-transform: capitalize;
+            font-size: 35px;
+            color: $blue;
+            font-weight: bold;
+            width: 30%;
+            position: sticky;
+            top: 0%;
+            left: 3%;
+
+            em {
+                font-style: normal;
+                font-weight: bold;
+                color: $green;
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 60px;
+                height: 2px;
+                content: "";
+                left: 50%;
+                margin-left: -30px;
+                background-color: $green;
+            }
+        }
+    }
+}
+
+.harness-card {
+    position: relative;
+    margin: 5% 0;
+    padding: 0 5% 5% 5%;
+    // color: #fff;
+    position: sticky;
+
+    @keyframes round {
+        0% {
+            transform: rotate(-360deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes round2 {
+        0% {
+            transform: rotate(360deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    .big {
+        width: 21%;
+        display: block;
+        margin: auto;
+        z-index: 200;
+        // height: 100vh;
+        position: sticky;
+        top: 0;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            animation: blur-in 1s 1;
+        }
+
+        .mascot {
+            width: 70%;
+            position: absolute;
+            top: 10%;
+            left: 65%;
+            z-index: 201;
+            animation: zoom 4s infinite;
+            transition: 5s all ease;
+        }
+
+        h4 {
+            text-align: center;
+            padding-bottom: 0.7em;
+            position: absolute;
+            top: 35%;
+            left: -120%;
+            text-transform: capitalize;
+            font-size: 25px;
+            color: $blue;
+            font-weight: bold;
+            margin-right: auto;
+            width: 120%;
+            line-height: 180%;
+
+            em {
+                font-style: normal;
+                font-weight: bold;
+                color: $green;
+            }
+        }
+    }
+
+    @keyframes zoom {
+        0% {
+            transform: scale(1);
+            transition: 1s all ease;
+        }
+
+        70% {
+            transform: scale(1.1);
+            transition: 1s all ease;
+        }
+
+        100% {
+            transform: scale(1);
+            transition: 1s all ease;
+        }
+    }
+
+    @keyframes identifier {
+        0% {
+            rotate: 0deg;
+            opacity: 1;
+        }
+
+        100% {
+            rotate: -30deg;
+            opacity: 1;
+        }
+    }
+
+    .first {
+        margin-left: auto;
+        width: 25%;
+        margin-top: 0;
+        position: relative;
+        background: #fff;
+        padding: 1%;
+        box-shadow: $boxShadow;
+        border-radius: 20px;
+        border: 1px solid rgba($color: $blue, $alpha: 0.2);
+
+
+        .circle1 {
+            position: absolute;
+            // width: 370px;
+            // height: 370px;
+            width: 100%;
+            height: 130%;
+            background: transparent;
+            border-radius: 10%;
+            @include centerPosition;
+            left: 0;
+            top: -10%;
+            // left: 90%;
+            border: 3px dashed #fff;
+            animation: round2 40s infinite;
+            z-index: -2;
+            background: $gradient;
+        }
+    }
+
+    .second {
+        margin-left: auto;
+        width: 25%;
+        margin-top: 30%;
+        margin-bottom: 30%;
+        position: relative;
+        background: #fff;
+        padding: 1%;
+        box-shadow: $boxShadow;
+        border-radius: 20px;
+        border: 1px solid rgba($color: $blue, $alpha: 0.2);
+
+        .circle1 {
+            position: absolute;
+            // width: 350px;
+            // height: 350px;
+            width: 100%;
+            height: 130%;
+            background: transparent;
+            border-radius: 10%;
+            @include centerPosition;
+            left: 0%;
+            top: -20%;
+            // left: 90%;
+            border: 3px dashed #fff;
+            animation: round2 20s infinite;
+            z-index: -2;
+            background: $gradient;
+        }
+    }
+
+
+
+    h3 {
+        font-size: 25px;
+        text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 1);
+        font-weight: bold;
+        text-transform: capitalize;
+        font-family: "Maname", serif;
+        color: $blue;
+    }
+
+    p {
+        font-size: 16px;
+        // text-align: right;
+        margin-left: auto;
+        margin-top: 10%;
+    }
+}
+
+.harness-mobile {
+    display: none;
+
+    .harness-mobile-body {
+        .harness-mobile-card {
+
+            &:first-child {
+                margin-bottom: 3%;
+            }
+
+            .big {
+                width: 47%;
+                display: block;
+                margin: auto;
+                z-index: 200;
+                // height: 100vh;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                    animation: blur-in 1s 1;
+                }
+
+                .mascot {
+                    width: 70%;
+                    position: absolute;
+                    top: 10%;
+                    left: 65%;
+                    z-index: 201;
+                    animation: zoom 4s infinite;
+                    transition: 5s all ease;
+                }
+
+                h4 {
+                    text-align: center;
+                    padding-bottom: 0.7em;
+                    position: absolute;
+                    top: 35%;
+                    left: -120%;
+                    text-transform: capitalize;
+                    font-size: 25px;
+                    color: $blue;
+                    font-weight: bold;
+                    margin-right: auto;
+                    width: 120%;
+                    line-height: 180%;
+
+                    em {
+                        font-style: normal;
+                        font-weight: bold;
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .tet {
+            margin: auto;
+            width: 90%;
+            background: #fff;
+            padding: 5%;
+            // box-shadow: $boxShadow;
+            border-radius: 20px;
+            // border: 1px solid rgba($color: $blue, $alpha: 0.2);
+
+            h3 {
+                text-transform: capitalize;
+                font-weight: bold;
+                color: $blue;
+            }
+        }
+
+
+    }
+}
+
+.harness-laptop{
+    display: none;
+}
+
+
+// Media Queries=====================================================
+
+$xs: 320px;
+$sm: 480px;
+$md: 767px;
+$lg: 1024px;
+$xl: 1920px;
+
+@media (min-width: $xs) and (max-width: $sm) and (orientation: portrait) {
+    .harness {
+        display: none;
+    }
+
+    .harness-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 481px) and (max-width: $md) and (orientation: landscape) {
+    .harness {
+        display: none;
+    }
+
+    .harness-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 481px) and (max-width: $md) and (orientation: portrait) {
+    .harness {
+        display: none;
+    }
+
+    .harness-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: $lg) and (orientation: landscape) {
+    .harness {
+        display: none;
+    }
+
+    .harness-laptop {
+        display: block;
+        .harness-body {
+            height: 220vh;
+
+            .title {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .harness-card {
+        h3 {
+            font-size: 20px;
+            text-shadow: none;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: $lg) and (orientation: portrait) {}
+
+@media (min-width: 1025px) and (max-width: $xl) {}

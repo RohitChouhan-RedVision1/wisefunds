@@ -1,0 +1,601 @@
+@import '../../Sass/variables.scss';
+@import '../../Sass/mixin.scss';
+@import '../../Sass/animations.scss';
+
+.contact-page {
+
+    margin: 10% auto 5% auto;
+    width: 80%;
+
+    .contact-page-body {
+        display: flex;
+        box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
+        border: 1px solid $blue;
+
+        form {
+            width: 70%;
+            padding: 2% 5%;
+
+            button {
+                padding: 1.5% 5%;
+                text-align: center;
+                color: #fff;
+                background: $green;
+                border: none;
+                box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
+            }
+
+
+            h3 {
+                margin-bottom: 5%;
+                color: $blue;
+                font-weight: bold;
+            }
+
+            .form-body {
+                display: flex;
+                flex-wrap: wrap;
+
+
+                .input {
+                    width: calc(100% / 2.3);
+                    margin-right: 5%;
+
+                    &:nth-child(even) {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .input {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 3%;
+
+                label {
+                    color: rgba($color: #000000, $alpha: 0.4);
+                }
+
+                input,
+                textarea {
+                    border: none;
+                    outline: none;
+                    padding: 1% 0;
+                    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.6);
+                    margin-bottom: 3%;
+
+                    &::placeholder {
+                        color: rgba($color: #000000, $alpha: 0.8);
+                    }
+
+                }
+
+                textarea {
+                    height: 15vh;
+                }
+            }
+        }
+
+        .contact-info {
+            width: 30%;
+            color: #fff;
+            background: $green;
+            padding: 3% 3%;
+
+            h3 {
+                text-transform: capitalize;
+                margin-bottom: 15%;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 6% 0;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: #fff;
+                }
+
+                p {
+                    margin: 0;
+                    margin-left: 5%;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+
+}
+
+.locations {
+
+    .location-card {
+        @include flex;
+        margin: 5% 0;
+        position: relative;
+
+        .location-card-text {
+            width: 60%;
+            position: relative;
+            left: -20%;
+
+            img {
+                width: 100%;
+            }
+
+            .location-card-caption {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                height: 90%;
+                background: rgba($color: #fff, $alpha: 0.9);
+                padding: 5% 10% 5% 5%;
+                @include flex;
+                // align-items: center;
+                // justify-content: center;
+                flex-direction: column;
+
+                h3 {
+                    font-size: 2vw;
+                    font-weight: bold;
+                    color: $blue;
+                    margin-bottom: 3%;
+                }
+
+                p,
+                a,
+                span {
+                    font-size: 16px;
+                    @include flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 1% 0;
+                    font-weight: 500;
+                }
+
+                .compliance {
+                    @include flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    a {
+                        margin-left: 2%;
+                        font-weight: 500;
+                    }
+                }
+
+                svg {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 2%;
+                    fill: $blue;
+                }
+            }
+        }
+
+        iframe {
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+        }
+    }
+
+    .location-card-2 {
+        @include flex;
+        margin: 5% 0;
+        position: relative;
+
+        .location-card-text {
+            width: 60%;
+            position: relative;
+            right: -20%;
+
+            img {
+                width: 100%;
+            }
+
+            .location-card-caption {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                height: 90%;
+                background: rgba($color: #fff, $alpha: 0.9);
+                padding: 5% 10% 5% 5%;
+                @include flex;
+                flex-direction: column;
+
+                h3 {
+                    font-size: 2vw;
+                    font-weight: bold;
+                    color: $blue;
+                    margin-bottom: 3%;
+                    text-align: right;
+
+                }
+
+                p,
+                a,
+                span {
+                    font-size: 16px;
+                    @include flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 1% 0;
+                    font-weight: 500;
+                    text-align: right;
+
+                }
+
+                svg {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 2%;
+                    fill: $blue;
+                }
+            }
+        }
+
+        iframe {
+            width: 50%;
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+        }
+    }
+}
+
+
+// Media Queries=====================================================
+
+$xs: 320px;
+$sm: 480px;
+$md: 767px;
+$lg: 1024px;
+$xl: 1920px;
+
+@media (min-width: $xs) and (max-width: $sm) and (orientation: portrait) {
+
+    .contact-page {
+        overflow: hidden;
+        width: 100%;
+        padding: 5%;
+
+        .contact-page-body {
+            flex-direction: column-reverse;
+
+            form,
+            .contact-info {
+                width: 100%;
+            }
+
+            .contact-info {
+                padding: 5%;
+
+                h3 {
+                    margin-bottom: 5%;
+                }
+
+                a {
+                    margin: 2% 0;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            form {
+                padding: 5%;
+
+                .form-body {
+                    .input {
+                        width: 100%;
+
+                        input,
+                        label {
+                            font-size: 16px;
+
+                            &::placeholder {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .locations {
+
+        .location-card,
+        .location-card-2 {
+            flex-direction: column-reverse;
+            margin-top: 50%;
+
+            .location-card-text {
+                width: 90%;
+                left: 0;
+                z-index: 2;
+                margin: auto;
+
+                .location-card-caption {
+                    h3 {
+                        font-size: 15px;
+                    }
+
+                    p,
+                    a,
+                    b,
+                    span {
+                        font-size: 9px;
+                        margin: 1px;
+                    }
+
+                }
+            }
+
+            iframe {
+                width: 100%;
+                top: -70%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: $md) and (orientation: landscape) {
+    .contact-page {
+        overflow: hidden;
+        width: 100%;
+        padding: 5%;
+
+        .contact-page-body {
+            flex-direction: column-reverse;
+
+            form,
+            .contact-info {
+                width: 100%;
+            }
+
+            .contact-info {
+                padding: 5%;
+
+                h3 {
+                    margin-bottom: 5%;
+                }
+
+                a {
+                    margin: 2% 0;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            form {
+                padding: 5%;
+
+                .form-body {
+                    .input {
+                        width: 100%;
+
+                        input,
+                        label {
+                            font-size: 16px;
+
+                            &::placeholder {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .locations {
+
+        .location-card,
+        .location-card-2 {
+            flex-direction: column-reverse;
+            margin-top: 50%;
+
+            .location-card-text {
+                width: 90%;
+                left: 0;
+                z-index: 2;
+                margin: auto;
+
+                .location-card-caption {
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    p,
+                    a,
+                    b,
+                    span {
+                        font-size: 14px;
+                        margin: 1px;
+                    }
+
+                }
+            }
+
+            iframe {
+                width: 100%;
+                top: -70%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: $md) and (orientation: portrait) {
+    .contact-page {
+        overflow: hidden;
+        width: 100%;
+        padding: 5%;
+
+        .contact-page-body {
+            flex-direction: column-reverse;
+
+            form,
+            .contact-info {
+                width: 100%;
+            }
+
+            .contact-info {
+                padding: 5%;
+
+                h3 {
+                    margin-bottom: 5%;
+                }
+
+                a {
+                    margin: 2% 0;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            form {
+                padding: 5%;
+
+                .form-body {
+                    .input {
+                        width: 100%;
+
+                        input,
+                        label {
+                            font-size: 16px;
+
+                            &::placeholder {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .locations {
+
+        .location-card,
+        .location-card-2 {
+            flex-direction: column-reverse;
+            margin-top: 50%;
+
+            .location-card-text {
+                width: 90%;
+                left: 0;
+                z-index: 2;
+                margin: auto;
+
+                .location-card-caption {
+                    h3 {
+                        font-size: 16px;
+                    }
+
+                    p,
+                    a,
+                    b,
+                    span {
+                        font-size: 10px;
+                        margin: 1px;
+                    }
+
+                }
+            }
+
+            iframe {
+                width: 100%;
+                top: -70%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: $lg) {
+
+    .contact-page {
+        overflow: hidden;
+        width: 100%;
+        padding: 5%;
+
+        .contact-page-body {
+
+            .contact-info {
+                width: 40%;
+
+            }
+
+            form {
+                padding: 5%;
+
+                .form-body {
+                    .input {
+                        // width: 100%;
+
+                        input,
+                        label {
+                            font-size: 16px;
+
+                            &::placeholder {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .locations {
+        .location-card {
+            .location-card-text {
+                .location-card-caption {
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    p,
+                    a,
+                    b,
+                    span {
+                        font-size: 14px;
+                        margin: 1px;
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: $xl) {}

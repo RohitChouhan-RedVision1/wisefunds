@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// padding
+$padding: 5% 5% 5% 5%;
+
+// font-family
+$title-font: "Noto Sans", sans-serif;
+$body-font: "Mukta", sans-serif;
+
+$boxShadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+// colors
+
+$black: #0B0B0B;
+$green: #075107;
+$blue: #2058D4;
+$grey: #686868;
+
+// gradients
+$header-graident: linear-gradient(31deg, rgba(255, 255, 255, 1) 0%, rgba(7, 81, 7, 0.5719713910955007) 100%);
+$gradient: linear-gradient(31deg, rgba(7, 81, 7, 0.7848565451571253) 0%, rgba(32, 88, 212, 0.6952206908153886) 54%, rgba(7, 81, 7, 0.5719713910955007) 85%);
+$greenGrad: linear-gradient(31deg, $green 0%, rgba($color: $green, $alpha: 0.6) 100%); // color: #fff;
+$blueGrad: linear-gradient(31deg, $blue 0%, rgba($color: $blue, $alpha: 0.6) 100%); // color: #fff;
