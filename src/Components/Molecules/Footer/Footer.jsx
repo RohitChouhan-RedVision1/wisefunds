@@ -117,6 +117,14 @@ const Footer = () => {
             title: "Employee Login",
             url: "/Employeelogin"
         },
+        {
+            title: "Broker Login",
+            url: "/Brokerlogin"
+        },
+        {
+            title: "Branch  Login",
+            url: "/Branchlogin"
+        },
     ]
 
     const contactInfo = [

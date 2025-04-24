@@ -45,16 +45,17 @@ function encryptPassword(password) {
   return encrypted;
 }
 
-const Login = () => {
+const BranchLogin = () => {
   const router = useNavigate();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [provider, setProvider] = useState({
     username: "",
     password: "",
-    loginFor: "CLIENT", // This will be set initially
+    loginFor:"BRANCH", // This will be set initially
     callbackUrl: "https://www.wisefunds.in/login",
   });
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -71,7 +72,7 @@ const Login = () => {
     console.log("Encoded Form Data:", formEncodedData);
 
     const res = await axios.post(
-      "https://wealthelite.in/api/app-api/website-login",
+      "https://wealthelite.in//api/app-api/website-login",
       formEncodedData,
       {
         headers: {
@@ -94,7 +95,6 @@ const Login = () => {
       setLoading(false);
     }
   };
-
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -186,7 +186,7 @@ const Login = () => {
 
               <div class="">
                 <p class="forgot-password">
-                  <Link to={`/forgetpassword?loginfor=CLIENT`}>
+                  <Link to={`/forgetpassword?loginfor=BRANCH`}>
                     Forgot Password?
                   </Link>
                 </p>
@@ -275,4 +275,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default BranchLogin;

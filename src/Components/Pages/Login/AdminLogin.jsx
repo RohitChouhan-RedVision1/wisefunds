@@ -52,7 +52,7 @@ const AdminLoginn = () => {
   const [provider, setProvider] = useState({
     username: "",
     password: "",
-    loginFor:"ADVISOR", // This will be set initially
+    loginFor:"ARN", // This will be set initially
     callbackUrl: "https://www.wisefunds.in/login",
   });
 
@@ -163,7 +163,6 @@ const AdminLoginn = () => {
               <div class="input-box animation">
                 <input
                   type="text"
-                  placeholder="Email"
                   value={provider.username}
                   onChange={(e) =>
                     setProvider({ ...provider, username: e.target.value })

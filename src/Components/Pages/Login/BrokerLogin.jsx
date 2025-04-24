@@ -45,16 +45,17 @@ function encryptPassword(password) {
   return encrypted;
 }
 
-const Login = () => {
+const BrokerLogin = () => {
   const router = useNavigate();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [provider, setProvider] = useState({
     username: "",
     password: "",
-    loginFor: "CLIENT", // This will be set initially
+    loginFor:"BROKER", // This will be set initially
     callbackUrl: "https://www.wisefunds.in/login",
   });
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -95,6 +96,7 @@ const Login = () => {
     }
   };
 
+  const roles = ["CLIENT", "EMPLOYEE", "ADMIN"];
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -186,7 +188,7 @@ const Login = () => {
 
               <div class="">
                 <p class="forgot-password">
-                  <Link to={`/forgetpassword?loginfor=CLIENT`}>
+                  <Link to={`/forgetpassword?loginfor=BROKER`}>
                     Forgot Password?
                   </Link>
                 </p>
@@ -275,4 +277,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default BrokerLogin;

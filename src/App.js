@@ -52,6 +52,8 @@ import IframeComponent from "./Components/Molecules/Search/SearchDetail";
 import ForgetPassword from "./Components/Pages/Forgetpassword/Forgetpassword";
 import AdminLoginn from "./Components/Pages/Login/AdminLogin";
 import EmployeeLogin from "./Components/Pages/Login/EmployeeLogin";
+import BrokerLogin from "./Components/Pages/Login/BrokerLogin";
+import BranchLogin from "./Components/Pages/Login/BranchLogin";
 
 function App() {
   return (
@@ -63,6 +65,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/Adminlogin" element={<AdminLoginn />} />
           <Route path="/Employeelogin" element={<EmployeeLogin />} />
+          <Route path="/Brokerlogin" element={<BrokerLogin />} />
+          <Route path="/Branchlogin" element={<BranchLogin />} />
           <Route path="/forgetpassword" element={<ForgetPassword />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact-us" element={<Contact />} />

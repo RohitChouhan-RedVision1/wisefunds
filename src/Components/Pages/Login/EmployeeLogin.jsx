@@ -72,7 +72,7 @@ const EmployeeLogin = () => {
     console.log("Encoded Form Data:", formEncodedData);
 
     const res = await axios.post(
-      "https://wealthelite.in//api/app-api/website-login",
+      "https://wealthelite.in/api/app-api/website-login",
       formEncodedData,
       {
         headers: {
@@ -162,7 +162,6 @@ const EmployeeLogin = () => {
               <div class="input-box animation">
                 <input
                   type="text"
-                  placeholder="Email"
                   value={provider.username}
                   onChange={(e) =>
                     setProvider({ ...provider, username: e.target.value })
