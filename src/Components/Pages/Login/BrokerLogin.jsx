@@ -53,7 +53,8 @@ const BrokerLogin = () => {
     username: "",
     password: "",
     loginFor:"BROKER", // This will be set initially
-    callbackUrl: "https://www.wisefunds.in/login",
+      callbackUrl: "https://www.wisefunds.in/login",
+    siteUrl:"https://wealthelite.in/"
   });
 
 
@@ -61,25 +62,7 @@ const BrokerLogin = () => {
     event.preventDefault();
     try {
       setLoading(true);
-      console.log(provider, "provider");
-      const formEncodedData = new URLSearchParams();
-      const encryptedPassword = encryptPassword(provider.password);
-      formEncodedData.append("username", provider.username);
-    formEncodedData.append("password", encryptedPassword);
-    formEncodedData.append("callbackUrl", provider.callbackUrl);
-    formEncodedData.append("loginFor", provider.loginFor);
-
-    console.log("Encoded Form Data:", formEncodedData);
-
-    const res = await axios.post(
-      "https://wealthelite.in/api/app-api/website-login",
-      formEncodedData,
-      {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      }
-    );
+    const res = await axios.post("https://redvisionweb.com/api/login/arn-login", provider);
       
     console.log(res)
 

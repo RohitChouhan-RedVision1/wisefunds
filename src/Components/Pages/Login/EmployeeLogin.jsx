@@ -54,7 +54,8 @@ const EmployeeLogin = () => {
     username: "",
     password: "",
     loginFor: "EMPLOYEE", // This will be set initially
-    callbackUrl: "https://www.wisefunds.in/login",
+      callbackUrl: "https://www.wisefunds.in/login",
+    siteUrl:"https://wealthelite.in/"
   });
 
   const handleSubmit = async (event) => {
@@ -70,16 +71,7 @@ const EmployeeLogin = () => {
     formEncodedData.append("loginFor", provider.loginFor);
 
     console.log("Encoded Form Data:", formEncodedData);
-
-    const res = await axios.post(
-      "https://wealthelite.in/api/app-api/website-login",
-      formEncodedData,
-      {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      }
-    );
+    const res = await axios.post("https://redvisionweb.com/api/login/arn-login", provider);
       
     console.log(res)
 

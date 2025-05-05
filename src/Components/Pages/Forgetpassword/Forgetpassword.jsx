@@ -19,7 +19,7 @@ const ForgetPassword = () => {
 
   const [provider, setProvider] = useState({
     userName: "",
-    type: slug === "ADMIN" ? "ADVISOR" : slug,
+    type: slug === "ADMIN" ? "ARN" : slug,
     source: "link",
   });
 
@@ -35,7 +35,7 @@ const ForgetPassword = () => {
           OtpMobileNo: mobileno,
           mobileOtp: otp,
         };
-        const response = await axios.post("https://wealthelite.in/Login/login/submit-forget-password-otp", otpData);
+        const response = await axios.post("https://redvisionweb.com/api/login/submit-forget-password", otpData);
 
         if (response.data.msgType === "success") {
           setOtpField(true);
@@ -45,7 +45,7 @@ const ForgetPassword = () => {
         }
       } else {
         // Request OTP
-        const response = await axios.post("https://wealthelite.in/Login/login/send-forget-password-otp", provider);
+        const response = await axios.post("https://redvisionweb.com/api/login/forget-password", provider);
 
         if (response.data.msgType === "success") {
           setOtpField(true);
@@ -89,7 +89,7 @@ const ForgetPassword = () => {
                 <div className="input-box animation">
                   <input
                     type="text"
-                    placeholder="Email"
+                    // placeholder="Email"
                     value={provider.userName}
                     onChange={(e) =>
                       setProvider({ ...provider, userName: e.target.value })
@@ -102,7 +102,7 @@ const ForgetPassword = () => {
                 <div className="input-box animation">
                   <input
                     type="text"
-                    placeholder="Enter OTP"
+                    // placeholder="Enter OTP"
                     value={otp}
                     onChange={(e) => setOtp(e.target.value)}
                     required

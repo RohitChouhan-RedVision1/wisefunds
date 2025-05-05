@@ -37,591 +37,690 @@ import Card29image from "../../Images/MediaPresence/8_obxy5d.jpg";
 import Card31image from "../../Images/MediaPresence/6_tvbou5.jpg";
 import Card30image from "../../Images/MediaPresence/9_mdmb8h.jpg";
 import Card32image from "../../Images/MediaPresence/9_os8jc9.jpg";
+import Card33image from "../../Images/MediaPresence/news33.jpg";
+import Card34image from "../../Images/MediaPresence/Hindi Danik Raipur.jpg";
+import Card35image from "../../Images/MediaPresence/Raipur Bhilai.jpg";
+import Card36image from "../../Images/MediaPresence/News 1.jpg";
+import Card37image from "../../Images/MediaPresence/IMG-20250421-WA0046.jpg";
+import Card38image from "../../Images/MediaPresence/IMG-20250421-WA0047.jpg";
+import Card39image from "../../Images/MediaPresence/IMG-20250421-WA0048.jpg";
+import Card40image from "../../Images/MediaPresence//IMG-20250421-WA0050.jpg";
+import Card41image from "../../Images/MediaPresence//IMG-20250421-WA0051.jpg";
+import Card42image from "../../Images/MediaPresence//IMG-20250421-WA0053.jpg";
 import Title from "../Title/Title";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+ 
+const cardsData = [
+  {
+    type: "pdf",
+    title: "वाइज फिनसर्व ने एनटीपीसी रायपुर, सिपाट और भिलाई के कर्मचारियों के लिए वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "",
+    date: "",
+    fileName: "17_March_2025.pdf",
+    logo: "",
+  },
+  {
+    type: "pdf",
+    title: "Empowering Women Through Financial Independence:A Celebration of Success on Women’s Day ",
+    media: "",
+    date: "",
+    fileName: "North_East.pdf",
+    logo: "",
+  },
+  {
+    type: "pdf",
+    title: "Charu Ma'am News Coverage",
+    media: "",
+    date: "",
+    fileName: "Ajay_SIr_Article.pdf",
+    logo: "",
+  },
+  {
+    type: "pdf",
+    title: "वाइज फिनसर्व ने एनटीपीसी रायपुर, सिपाट और भिलाई के कर्मचारियों के लिए वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "",
+    date: "",
+    fileName: "ek_Raipur_and_Lucknow.pdf",
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "Charu Ma'am News Coverage",
+    media: "",
+    date: "",
+    image: Card33image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाइज फिनसर्व ने एनटीपीसी रायपुर, सिपाट और भिलाई के कर्मचारियों के लिए वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "",
+    date: "",
+    image: Card35image,
+    logo: "",
+  },
 
+  {
+    type: "modal",
+    title: "वाइज फिनसर्व ने एनटीपीसी रायपुर, सिपाट और भिलाई के कर्मचारियों के लिए वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "",
+    date: "",
+    image: Card34image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "कार्मिकों को लालच के जाल से बचने की चेतावनी  ",
+    media: "",
+    date: "",
+    image: Card40image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "सेवानिवृत्ति के बाद की वित्तीय योजना पर सेमिनार आयोजित  ",
+    media: "",
+    date: "",
+    image: Card41image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वित्तीय योजना पर सेमिनार आयोजित किया  ",
+    media: "",
+    date: "",
+    image: Card42image,
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Gold versus real estate: Shifting fortunes call for smart diversification this Akshaya Tritiya ",
+    media: "Hindustan Times",
+    date: "30 April 2025",
+    link: "https://www.hindustantimes.com/real-estate/gold-versus-real-estate-shifting-fortunes-call-for-smart-diversification-this-akshaya-tritiya-101745983719668.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Edelweiss MF bets on India's digital boom with first-of-its-kind fund; should you get in? ",
+    media: "Money Control",
+    date: "28 April 2025",
+    link: "https://www.moneycontrol.com/news/business/personal-finance/edelweiss-bets-on-india-s-digital-boom-with-first-of-its-kind-fund-should-you-get-in-13005945.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Wise Finserv in Collaboration with ONGC Hosts Seminar on Financial Planning After Retirement ",
+    media: "CXO today",
+    date: "",
+    link: "https://cxotoday.com/press-release/wise-finserv-in-collaboration-with-ongc-hosts-seminar-on-financial-planning-after-retirement",
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाइज फिनसर्व ने एनटीपीसी रायपुर, सिपाट और भिलाई के कर्मचारियों के लिए वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "",
+    date: "",
+    image: Card36image,
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "The FY26 Investment Playbook: Here's how you could manage your money this year ",
+    media: "Pratidin Rajdhani",
+    date: "1 April 2025",
+    link: "https://www.moneycontrol.com/news/business/personal-finance/the-fy26-investment-playbook-here-s-how-you-could-manage-your-money-this-year-12977721.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "The FY26 Investment Playbook: Here's how you could manage your money this year ",
+    media: "Money Control",
+    date: "1 April 2025",
+    link: "https://www.moneycontrol.com/news/business/personal-finance/the-fy26-investment-playbook-here-s-how-you-could-manage-your-money-this-year-12977721.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "वाइज़ फिनसर्व एवम ओएनजीसी ने किया सेवानिवृत्ति के बाद की वित्तीय योजना पर सेमिनार आयोजित ",
+    media: "Arihant Samachar",
+    date: "19 April 2025",
+    link: "https://arihantsamachar.com/2025/04/19/wise-finserv-and-ongc-organize-seminar-on-post-retirement-financial-planning/",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "वाइज़ फिनसर्व और ओएनजीसी ने सेवानिवृत्त कर्मचारियों के लिए आयोजित किया वित्तीय योजना पर विशेष सेमिनार। ",
+    media: "Khabaryatra",
+    date: "19 April 2025",
+    link: "https://khabaryatra.in/special-seminars-on-financial-plan-organized-by-wise-finserv-and-ongc-for-retired-employees/",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Wise Finserv in Collaboration with ONGC Hosts Seminar on Financial Planning After Retirement ",
+    media: "CXO today",
+    date: "22 April 2025",
+    link: "https://cxotoday.com/press-release/wise-finserv-in-collaboration-with-ongc-hosts-seminar-on-financial-planning-after-retirement/",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Understanding overnight mutual funds and their role in volatile markets ",
+    media: "Cnbctv18",
+    date: "23 April 2025",
+    link: "https://www.cnbctv18.com/personal-finance/overnight-mutual-funds-explainer-role-in-volatile-markets-returns-19592573.htm",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Can You Claim Deductions Under Sections 80C, 80D, Etc., While Paying Advance Tax? ",
+    media: "",
+    date: "28 April 2025",
+    link: "https://www.goodreturns.in/personal-finance/investment/can-you-claim-deductions-under-sections-80c-80d-etc-while-paying-advance-tax-1420559.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "वाइज फिनसर्व ने एनटीपीसी रायपुर, सिपाट और भिलाई के कर्मचारियों के लिए वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "Pratidin Rajdhani",
+    date: "13 March 2025",
+    link: "https://epaper.pratidinrajdhani.in/view/382/13-mar-2025/8",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Specialised Investment Funds: A new avenue for investors looking for higher returns with calculated risks ",
+    media: "",
+    date: "",
+    link: "https://www.moneycontrol.com/news/business/personal-finance/specialised-investment-funds-a-new-avenue-for-investors-looking-for-higher-returns-with-calculated-risks-12953105.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Navigating the New Tax Landscape: A Guide to the 2025 Income Tax Regime ",
+    media: "",
+    date: "",
+    link: "https://docs.google.com/document/d/1zxvvgFLuOeLt3RtTYwm0XiGTf82PMIwZ1ZmFQ5qieLY/edit?tab=t.0",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "New Income Tax Bill 2025 Highlights: New I-T bill to be tabled in Lok Sabha on Thursday; How will it impact taxpayers? ",
+    media: "",
+    date: "",
+    link: "https://www.livemint.com/money/income-tax-bill-news-live-nirmala-sitharaman-proposed-bill-date-key-expectations-parliament-this-week-budget-india-news-11739151378116.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title: "Press Insider's Mishika Bangia spoke with Indian women leaders ",
+    media: "",
+    date: "",
+    link: "https://www.linkedin.com/posts/press-insider_how-to-break-barriers-and-accelerate-equality-activity-7304014818783502336-GzIe?utm_source=share&amp;utm_medium=member_android&amp;rcm=ACoAAAkt52ABRGCiqcFwps2E8q9Wl5OCxkNHEF0",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Looking for last-minute tax-saving avenues before March 31st? Here’s how Section 80C can come to your rescue ",
+    media: "",
+    date: "",
+    link: "https://economictimes.indiatimes.com/wealth/tax/looking-for-last-minute-tax-saving-avenues-before-march-31st-heres-how-section-80c-can-come-to-your-rescue/articleshow/119164513.cms",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Why financial year-end portfolio rebalancing matters and how to go about it ",
+    media: "Business Standard",
+    date: "12 Feb 2025",
+    link: "https://www.business-standard.com/amp/finance/personal-finance/why-financial-year-end-portfolio-rebalancing-matters-and-how-to-go-about-it-125032701283_1.html",
+    logo: "",
+  },
+  {
+    type: "link",
+    title: "New Income Tax Bill 2025: 5 Key Things Every Taxpayer Should Know",
+    media: "",
+    date: "",
+    link: "https://www.herzindagi.com/society-culture/new-income-tax-bill-2025-takeaways-for-taxpayers-article-1018386",
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाइज़ फिनसर्व ने ओएनजीसी के साथ मिलकर सेवानिवृत्ति के बाद की वित्तीय योजना पर सेमिनार आयोजित किया  ",
+    media: "",
+    date: "",
+    image: Card37image,
+    logo: "",
+  },
+  
+  {
+    type: "link",
+    title: "Raipur hindi edition ",
+    media: "",
+    date: "14 March 2025",
+    link: "https://www.dailypioneer.com/uploads/2025/epaper/march/raipur-hindi-edition-2025-03-14.pdf",
+    logo: "",
+  },
+  {
+    type: "link",
+    title: "वाइज फिनसर्व ने वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "Haribhoomi",
+    date: "13 March 2025",
+    link: "https://epaper.haribhoomi.com/view/27736/new-delhi-main-edition-13-03-2025/10",
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाइज़ फिनसर्व ने ओएनजीसी के साथ मिलकर सेवानिवृत्ति के बाद की वित्तीय योजना पर सेमिनार आयोजित किया  ",
+    media: "",
+    date: "",
+    image: Card38image,
+    logo: "",
+  },
+  {
+    type: "link",
+    title: "Overnight Mutual Funds Explainer Role in Volatile Markets Returns ",
+    media: "",
+    date: "",
+    link: "https://www.cnbctv18.com/personal-finance/overnight-mutual-funds-explainer-role-in-volatile-markets-returns-19592573.htm",
+    logo: "",
+  },
+  {
+    type: "link",
+    title:
+      "Tax Planning 2.0: How the 2025 Regime Impacts Your Financial Strategy ",
+    media: "",
+    date: "April 2025",
+    link: "https://observenow.com/2025/04/tax-planning-2-0-how-the-2025-regime-impacts-your-financial-strategy/",
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाइज़ फिनसर्व ने ओएनजीसी के साथ मिलकर सेवानिवृत्ति के बाद की वित्तीय योजना पर सेमिनार आयोजित किया  ",
+    media: "",
+    date: "",
+    image: Card39image,
+    logo: "",
+  },
+  {
+    type: "link",
+    title: "How AI is revolutionising wealth management for HNIs and UHNIs",
+    media: "",
+    date: "April 2025",
+    link: "https://www.newindianexpress.com/business/2025/Apr/27/how-ai-is-revolutionising-wealth-management-for-hnis-and-uhnis",
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "Senior Citizen Event 2024",
+    media: "Danik bhaskar",
+    date: "2024",
+    image: Card1image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "Investment Awarness Program Cleo County Sector 121 Noida",
+    media: "Hindustan Times",
+    date: "2024",
+    image: Card2image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "To Protect Liabilities, A term Plan is a better option",
+    media: "times of india",
+    date: "2019",
+    image: Card3image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "Charu pahuja: Leading the future of client-centric business model",
+    media: "silicon india",
+    date: "2017",
+    image: Card4image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाइस फिंसर्व का वाराणसी में खुला निःशुल्क वित्तीय परामर्श केन्द्र",
+    media: "Rashtriya Sahara",
+    date: "2018",
+    image: Card5image,
+    logo: "",
+  },
+  {
+    type: "pdf",
+    title: "वाइज फिनसर्व ने एनटीपीसी रायपुर, सिपाट और भिलाई के कर्मचारियों के लिए वित्तीय साक्षरता को बढ़ावा दिया ",
+    media: "",
+    date: "",
+    fileName: "raipur-hindi-edition.pdf",
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "Ajay Yadav",
+    media: "mint newspaper",
+    date: "2018",
+    image: Card6image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "jal vayu Vihar residents get tips on best investment options",
+    media: "JVCC event",
+    date: "2017",
+    image: Card7image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "प्रामाणिक फाइनेंसियल एडवाइजर की सलाह से करें निवेश : अजय",
+    media: "Rashtriya Sahara",
+    date: "2018",
+    image: Card8image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title:
+      "curius resident learn more about investments: senior citizens of Jal Vayu",
+    media: "JVCC event",
+    date: "2018",
+    image: Card9image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "investment 101 at jal vayu vihar, noida",
+    media: "JVCC event",
+    date: "2017",
+    image: Card10image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title:
+      "a reader asked why is past performance not indicative of future performance",
+    media: "hindustan times",
+    date: "2018",
+    image: Card11image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "a story of investment",
+    media: "hindustan times",
+    date: "2018",
+    image: Card12image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "a reader asked: 'Can a fund's risk change over time?",
+    media: "hindustan times",
+    date: "2018",
+    image: Card13image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "Guru Speak",
+    media: "hindustan times",
+    date: "2018",
+    image: Card14image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "Guru Speak",
+    media: "hindustan times",
+    date: "2018",
+    image: Card15image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वरिष्ठ नागरिकों को दी निवेश संबंधी जानकारी",
+    media: "hindustan times",
+    date: "2018",
+    image: Card16image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "लोगों ने किया लाफ्टर एक्सरसाइज",
+    media: "dainik jvcc",
+    date: "2017",
+    image: Card17image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "जेवीसीसी में लोगों को बताए गए बेहतर निवेश के तरीके",
+    media: "dainik jagran",
+    date: "2017",
+    image: Card18image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाइस फिंसर्व की वित्तीय सेवाएं अब शहर में",
+    media: "amr ujala",
+    date: "2018",
+    image: Card19image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title:
+      "Asset Allocation is the Most Important Parameter in Backing the Overall Protfolio Return",
+    media: "hindustan times",
+    date: "2018",
+    image: Card20image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "चिकित्सकों को निवेश के गुर सिखाए",
+    media: "hindustan times",
+    date: "2021",
+    image: Card21image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "सेक्टर-55 में कार्यक्रम का शुभारंभ करतीं मुख्य अतिथि।",
+    media: "",
+    date: "",
+    image: Card22image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "सरकार व कंपनियों के लिए उधार लेने का जरिया है बांड",
+    media: "Jagran",
+    date: "2022",
+    image: Card23image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "आईएमए भवन में चिकित्सकों को दी निवेश की जानकारी",
+    media: "agran",
+    date: "2022",
+    image: Card24image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "म्युचुअल फड में निवेश एक बेहतर विकल्प",
+    media: "hindustan",
+    date: "2021",
+    image: Card25image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "आईएमए डॉक्टरों ने समझे निवेश के गुर",
+    media: "hindustan",
+    date: "",
+    image: Card26image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "आईएमए भवन में चिकित्सकों को दी निवेश की जानकारी",
+    media: "Amarujala My City",
+    date: "",
+    image: Card24image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "चिकित्सकों को निवेश की दी जानकारी",
+    media: "Hindustan Times",
+    date: "2023",
+    image: Card27image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "सेमिनार में 100 से अधिक डॉक्टरों ने लिया भाग",
+    media: "Desh Pratidin",
+    date: "2024",
+    image: Card28image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "आई एम ए सदस्यों ने समझा वेल्थ मैनेजमेंट के लाभ",
+    media: "Desh Pratidin",
+    date: "2024",
+    image: Card29image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "निवेश करने से पहले सही सलाह लेना जरूरी: अजय",
+    media: "Desh Pratidin",
+    date: "2024",
+    image: Card30image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "प्राइवेट वेल्थ निवेशकों को किया जागरूक",
+    media: "Rashtriya Swaroop",
+    date: "2024",
+    image: Card31image,
+    logo: "",
+  },
+  {
+    type: "modal",
+    title: "वाईज फिनसर्व की शाखा का उद्घाटन",
+    media: "Desh Pratidin",
+    date: "2024",
+    image: Card32image,
+    logo: "",
+  },
+];
+ 
 const MediaPresence = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [modalContent, setModalContent] = React.useState({
-    name: "",
+    title: "",
     image: "",
+    logo: "",
   });
-  const responsive3 = {
+ 
+  const responsive = {
     600: { items: 5 },
   };
-
-  const handleCardClick = (name, image) => {
-    setModalContent({ name, image });
+ 
+  const handleModalOpen = (title, image, logo) => {
+    setModalContent({ title, image, logo });
     setIsModalOpen(true);
   };
-
+ 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
-
-  const items3 = [
-    <div
-      className="reviews-right-card"
-      onClick={() => handleCardClick("Senior Citizen Event 2024", Card1image)}
-    >
-      <h4>Senior Citizen Event 2024</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className=""></p>
-        <p className="">2024</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "Investment Awarness Program Cleo County Sector 121 Noida",
-          Card2image
-        )
-      }
-    >
-      <h4>Investment Awarness Program Cleo County Sector 121 Noida</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">Hindustan Times</p>
-        <p className="">2024</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "Investment Awarness Program Cleo County Sector 121 Noida",
-          Card3image
-        )
-      }
-    >
-      <h4>To Protect Liabilities, A term Plan is a better option</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">times of india</p>
-        <p className="">2019</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "Investment Awarness Program Cleo County Sector 121 Noida",
-          Card4image
-        )
-      }
-    >
-      <h4>Charu pahuja: Leading the future of client-centric business model</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">silicon india</p>
-        <p className="">2017</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "वाइस फिंसर्व का वाराणसी में खुला निःशुल्क वित्तीय परामर्श केन्द्र",
-          Card5image
-        )
-      }
-    >
-      <h4>वाइस फिंसर्व का वाराणसी में खुला निःशुल्क वित्तीय परामर्श केन्द्र</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">Rashtriya Sahara</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() => handleCardClick("Ajay Yadav", Card6image)}
-    >
-      <h4>Ajay Yadav</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">mint newspaper</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "jal vayu Vihar residents get tips on best investment options",
-          Card7image
-        )
-      }
-    >
-      <h4>jal vayu Vihar residents get tips on best investment options</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">JVCC event</p>
-        <p className="">2017</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "प्रामाणिक फाइनेंसियल एडवाइजर की सलाह से करें निवेश : अजय",
-          Card8image
-        )
-      }
-    >
-      <h4>प्रामाणिक फाइनेंसियल एडवाइजर की सलाह से करें निवेश : अजय</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">Rashtriya Sahara</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "curius resident learn more about investments: senior citizens of Jal Vayu",
-          Card9image
-        )
-      }
-    >
-      <h4>
-        curius resident learn more about investments: senior citizens of Jal
-        Vayu
-      </h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">JVCC event</p>
-        <p className="">2017</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick("investment 101 at jal vayu vihar, noida", Card10image)
-      }
-    >
-      <h4>investment 101 at jal vayu vihar, noida</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">JVCC event</p>
-        <p className="">2017</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "a reader asked why is past performance not indicative of future performance",
-          Card11image
-        )
-      }
-    >
-      <h4>
-        a reader asked why is past performance not indicative of future
-        performance
-      </h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() => handleCardClick("a story of investment", Card12image)}
-    >
-      <h4>a story of investment</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "a reader asked: 'Can a fund's risk change over time?'",
-          Card13image
-        )
-      }
-    >
-      <h4>a reader asked: 'Can a fund's risk change over time?'</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() => handleCardClick("Guru Speak", Card14image)}
-    >
-      <h4>Guru Speak</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() => handleCardClick("Guru Speak", Card15image)}
-    >
-      <h4>Guru Speak</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "वरिष्ठ नागरिकों को दी निवेश संबंधी जानकारी",
-          Card16image
-        )
-      }
-    >
-      <h4>वरिष्ठ नागरिकों को दी निवेश संबंधी जानकारी</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick("लोगों ने किया लाफ्टर एक्सरसाइज", Card17image)
-      }
-    >
-      <h4>लोगों ने किया लाफ्टर एक्सरसाइज</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">dainik jvcc</p>
-        <p className="">2017</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "जेवीसीसी में लोगों को बताए गए बेहतर निवेश के तरीके",
-          Card18image
-        )
-      }
-    >
-      <h4>जेवीसीसी में लोगों को बताए गए बेहतर निवेश के तरीके</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">dainik jagran</p>
-        <p className="">2017</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "वाइस फिंसर्व की वित्तीय सेवाएं अब शहर में",
-          Card19image
-        )
-      }
-    >
-      <h4>वाइस फिंसर्व की वित्तीय सेवाएं अब शहर में</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">amr ujala</p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "Asset Allocation is the Most Important Parameter in Backing the Overall Protfolio Return",
-          Card20image
-        )
-      }
-    >
-      <h4>
-        Asset Allocation is the Most Important Parameter in Backing the Overall
-        Protfolio Return
-      </h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times </p>
-        <p className="">2018</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick("चिकित्सकों को निवेश के गुर सिखाए", Card21image)
-      }
-    >
-      <h4>चिकित्सकों को निवेश के गुर सिखाए</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="">hindustan times </p>
-        <p className="">2021</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "सेक्टर-55 में कार्यक्रम का शुभारंभ करतीं मुख्य अतिथि।",
-          Card22image
-        )
-      }
-    >
-      <h4>सेक्टर-55 में कार्यक्रम का शुभारंभ करतीं मुख्य अतिथि।</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className=""></p>
-        <p className=""></p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "सरकार व कंपनियों के लिए उधार लेने का जरिया है बांड",
-          Card23image
-        )
-      }
-    >
-      <h4>सरकार व कंपनियों के लिए उधार लेने का जरिया है बांड</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="Jagran">Jagran</p>
-        <p className="2022">2022</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "आईएमए भवन में चिकित्सकों को दी निवेश की जानकारी",
-          Card24image
-        )
-      }
-    >
-      <h4>आईएमए भवन में चिकित्सकों को दी निवेश की जानकारी</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="Jagran"></p>
-        <p className="2022"></p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick("म्युचुअल फड में निवेश एक बेहतर विकल्प", Card25image)
-      }
-    >
-      <h4>म्युचुअल फड में निवेश एक बेहतर विकल्प</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="Jagran">Hindustan</p>
-        <p className="2022">2021</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick("आईएमए डॉक्टरों ने समझे निवेश के गुर", Card26image)
-      }
-    >
-      <h4>आईएमए डॉक्टरों ने समझे निवेश के गुर</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="Jagran">Hindustan</p>
-        <p className="2022"></p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "आईएमए भवन में चिकित्सकों को दी निवेश की जानकारी",
-          Card24image
-        )
-      }
-    >
-      <h4>आईएमए भवन में चिकित्सकों को दी निवेश की जानकारी</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="Jagran">Amarujala My City</p>
-        <p className="2022"></p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick("चिकित्सकों को निवेश की दी जानकारी", Card27image)
-      }
-    >
-      <h4>चिकित्सकों को निवेश की दी जानकारी</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="Jagran">Hindustan Times</p>
-        <p className="2022">2023</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-    <div
-      className="reviews-right-card"
-      onClick={() =>
-        handleCardClick(
-          "सेमिनार में 100 से अधिक डॉक्टरों ने लिया भाग",
-          Card28image
-        )
-      }
-    >
-      <h4>सेमिनार में 100 से अधिक डॉक्टरों ने लिया भाग</h4>
-      {/* <ReadMore> */}
-      <div className="box-paragraph">
-        <p className="Jagran">Desh Pratidin</p>
-        <p className="2022">2024</p>
-      </div>
-      {/* </ReadMore> */}
-    </div>,
-
-<div
-className="reviews-right-card"
-onClick={() =>
-  handleCardClick(
-    "आई एम ए सदस्यों ने समझा वेल्थ मैनेजमेंट के लाभ",
-    Card29image
-  )
-}
->
-<h4>आई एम ए सदस्यों ने समझा वेल्थ मैनेजमेंट के लाभ</h4>
-{/* <ReadMore> */}
-<div className="box-paragraph">
-  <p className="Jagran">Desh Pratidin</p>
-  <p className="2022">2024</p>
-</div>
-{/* </ReadMore> */}
-</div>,
-
-
-<div
-className="reviews-right-card"
-onClick={() =>
-  handleCardClick(
-    "निवेश करने से पहले सही सलाह लेना जरूरी: अजय",
-    Card30image
-  )
-}
->
-<h4>निवेश करने से पहले सही सलाह लेना जरूरी: अजय</h4>
-{/* <ReadMore> */}
-<div className="box-paragraph">
-  <p className="Jagran">Desh Pratidin</p>
-  <p className="2022">2024</p>
-</div>
-{/* </ReadMore> */}
-</div>,
-
-<div
-className="reviews-right-card"
-onClick={() =>
-  handleCardClick(
-    "प्राइवेट वेल्थ निवेशकों को किया जागरूक",
-    Card31image
-  )
-}
->
-<h4>प्राइवेट वेल्थ निवेशकों को किया जागरूक</h4>
-{/* <ReadMore> */}
-<div className="box-paragraph">
-  <p className="Jagran">Rashtriya Swaroop</p>
-  <p className="2022">2024</p>
-</div>
-{/* </ReadMore> */}
-</div>,
-
-<div
-className="reviews-right-card"
-onClick={() =>
-  handleCardClick(
-    "वाईज फिनसर्व की शाखा का उद्घाटन",
-    Card32image
-  )
-}
->
-<h4>वाईज फिनसर्व की शाखा का उद्घाटन</h4>
-{/* <ReadMore> */}
-<div className="box-paragraph">
-  <p className="Jagran">Desh Pratidin</p>
-  <p className="2022">2024</p>
-</div>
-{/* </ReadMore> */}
-</div>,
-
-
-  ];
-
+ 
+  const items = cardsData.map((card, index) => {
+    if (card.type === "modal") {
+      return (
+        <div
+          key={index}
+          className="reviews-right-card"
+          onClick={() => handleModalOpen(card.title, card.image, card.logo)}
+        >
+          <h4>{card.title}</h4>
+          <div className="box-paragraph">
+            <p>{card.media}</p>
+            <p>{card.date}</p>
+          </div>
+        </div>
+      );
+    } else if (card.type === "link") {
+      return (
+        <a
+          key={index}
+          className="reviews-right-card"
+          href={card.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h4>{card.title}</h4>
+          <div className="box-paragraph">
+            <p>{card.media}</p>
+            <p>{card.date}</p>
+          </div>
+        </a>
+      );
+    }else if (card.type === "pdf") {
+      return (
+        <a
+          key={index}
+          className="reviews-right-card"
+          href={`/pdf/${card.fileName}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h4>{card.title}</h4>
+          <div className="box-paragraph">
+            <p>{card.media}</p>
+            <p>{card.date}</p>
+          </div>
+        </a>
+      );
+    }
+    return null;
+  });
+ 
   return (
     <>
       <Title title1="Our" title2="Media" title3="Presence" />
       <div className="reviews">
         <div className="reviews-right">
-          {/* <h3>Some Good words from our customers</h3> */}
           <AnimationOnScroll
             offset={0}
             animateOnce={true}
@@ -629,8 +728,8 @@ onClick={() =>
           >
             <AliceCarousel
               mouseTracking
-              items={items3}
-              responsive={responsive3}
+              items={items}
+              responsive={responsive}
               controlsStrategy="alternate"
               autoPlay={true}
               infinite={true}
@@ -680,21 +779,34 @@ onClick={() =>
           </AnimationOnScroll>
         </div>
       </div>
-
+ 
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
             <button className="modal-close" onClick={handleCloseModal}>
               ✕
             </button>
-            <h2>{modalContent.name}</h2>
-            {console.log(modalContent.image)}
-            <img src={`${modalContent.image}`} alt={modalContent.name} />
+            {modalContent.logo && (
+              <img
+                src={modalContent.logo}
+                alt="Logo"
+                className="modal-logo"
+                style={{ width: "80px", marginBottom: "10px" }}
+              />
+            )}
+            <h2>{modalContent.title}</h2>
+            <img
+              src={modalContent.image}
+              alt={modalContent.title}
+              className="modal-image"
+              style={{ maxWidth: "100%", marginTop: "10px" }}
+            />
           </div>
         </div>
       )}
     </>
   );
 };
-
+ 
 export default MediaPresence;
+ 
