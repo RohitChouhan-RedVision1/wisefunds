@@ -47,6 +47,16 @@ import Card39image from "../../Images/MediaPresence/IMG-20250421-WA0048.jpg";
 import Card40image from "../../Images/MediaPresence//IMG-20250421-WA0050.jpg";
 import Card41image from "../../Images/MediaPresence//IMG-20250421-WA0051.jpg";
 import Card42image from "../../Images/MediaPresence//IMG-20250421-WA0053.jpg";
+import CNBCNEWS from "../../Images/newslogo/cnbc.png";
+import CXONEWS from "../../Images/newslogo/cxo.png";
+import BuisnessNEWS from "../../Images/newslogo/business-standard.png";
+import goodreturnNEWS from "../../Images/newslogo/good-return.png";
+import hindustantimesNEWS from "../../Images/newslogo/hz.png";
+import indianexpressNEWS from "../../Images/newslogo/indian-express.png";
+import khabaryatraNEWS from "../../Images/newslogo/khabar-yatra.png";
+import livemintNEWS from "../../Images/newslogo/live-mint.png";
+import moneycontrolNEWS from "../../Images/newslogo/money-control.png";
+import observeNEWS from "../../Images/newslogo/observe-now.png";
 import Title from "../Title/Title";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -140,7 +150,7 @@ const cardsData = [
     media: "Hindustan Times",
     date: "30 April 2025",
     link: "https://www.hindustantimes.com/real-estate/gold-versus-real-estate-shifting-fortunes-call-for-smart-diversification-this-akshaya-tritiya-101745983719668.html",
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "link",
@@ -149,7 +159,7 @@ const cardsData = [
     media: "Money Control",
     date: "28 April 2025",
     link: "https://www.moneycontrol.com/news/business/personal-finance/edelweiss-bets-on-india-s-digital-boom-with-first-of-its-kind-fund-should-you-get-in-13005945.html",
-    logo: "",
+    logo: moneycontrolNEWS,
   },
   {
     type: "link",
@@ -158,7 +168,7 @@ const cardsData = [
     media: "CXO today",
     date: "",
     link: "https://cxotoday.com/press-release/wise-finserv-in-collaboration-with-ongc-hosts-seminar-on-financial-planning-after-retirement",
-    logo: "",
+    logo: CXONEWS ,
   },
   {
     type: "modal",
@@ -175,7 +185,7 @@ const cardsData = [
     media: "Pratidin Rajdhani",
     date: "1 April 2025",
     link: "https://www.moneycontrol.com/news/business/personal-finance/the-fy26-investment-playbook-here-s-how-you-could-manage-your-money-this-year-12977721.html",
-    logo: "",
+    logo: moneycontrolNEWS,
   },
   {
     type: "link",
@@ -184,7 +194,7 @@ const cardsData = [
     media: "Money Control",
     date: "1 April 2025",
     link: "https://www.moneycontrol.com/news/business/personal-finance/the-fy26-investment-playbook-here-s-how-you-could-manage-your-money-this-year-12977721.html",
-    logo: "",
+    logo: moneycontrolNEWS,
   },
   {
     type: "link",
@@ -202,7 +212,7 @@ const cardsData = [
     media: "Khabaryatra",
     date: "19 April 2025",
     link: "https://khabaryatra.in/special-seminars-on-financial-plan-organized-by-wise-finserv-and-ongc-for-retired-employees/",
-    logo: "",
+    logo: khabaryatraNEWS,
   },
   {
     type: "link",
@@ -211,7 +221,7 @@ const cardsData = [
     media: "CXO today",
     date: "22 April 2025",
     link: "https://cxotoday.com/press-release/wise-finserv-in-collaboration-with-ongc-hosts-seminar-on-financial-planning-after-retirement/",
-    logo: "",
+    logo: CXONEWS ,
   },
   {
     type: "link",
@@ -220,7 +230,7 @@ const cardsData = [
     media: "Cnbctv18",
     date: "23 April 2025",
     link: "https://www.cnbctv18.com/personal-finance/overnight-mutual-funds-explainer-role-in-volatile-markets-returns-19592573.htm",
-    logo: "",
+    logo: CNBCNEWS ,
   },
   {
     type: "link",
@@ -229,7 +239,7 @@ const cardsData = [
     media: "",
     date: "28 April 2025",
     link: "https://www.goodreturns.in/personal-finance/investment/can-you-claim-deductions-under-sections-80c-80d-etc-while-paying-advance-tax-1420559.html",
-    logo: "",
+    logo: goodreturnNEWS,
   },
   {
     type: "link",
@@ -247,7 +257,7 @@ const cardsData = [
     media: "",
     date: "",
     link: "https://www.moneycontrol.com/news/business/personal-finance/specialised-investment-funds-a-new-avenue-for-investors-looking-for-higher-returns-with-calculated-risks-12953105.html",
-    logo: "",
+    logo: moneycontrolNEWS,
   },
   {
     type: "link",
@@ -265,7 +275,7 @@ const cardsData = [
     media: "",
     date: "",
     link: "https://www.livemint.com/money/income-tax-bill-news-live-nirmala-sitharaman-proposed-bill-date-key-expectations-parliament-this-week-budget-india-news-11739151378116.html",
-    logo: "",
+    logo: livemintNEWS,
   },
   {
     type: "link",
@@ -340,7 +350,7 @@ const cardsData = [
     media: "",
     date: "",
     link: "https://www.cnbctv18.com/personal-finance/overnight-mutual-funds-explainer-role-in-volatile-markets-returns-19592573.htm",
-    logo: "",
+    logo: CNBCNEWS ,
   },
   {
     type: "link",
@@ -349,7 +359,7 @@ const cardsData = [
     media: "",
     date: "April 2025",
     link: "https://observenow.com/2025/04/tax-planning-2-0-how-the-2025-regime-impacts-your-financial-strategy/",
-    logo: "",
+    logo: observeNEWS,
   },
   {
     type: "modal",
@@ -365,7 +375,7 @@ const cardsData = [
     media: "",
     date: "April 2025",
     link: "https://www.newindianexpress.com/business/2025/Apr/27/how-ai-is-revolutionising-wealth-management-for-hnis-and-uhnis",
-    logo: "",
+    logo: indianexpressNEWS,
   },
   {
     type: "modal",
@@ -381,7 +391,7 @@ const cardsData = [
     media: "Hindustan Times",
     date: "2024",
     image: Card2image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -463,7 +473,7 @@ const cardsData = [
     media: "hindustan times",
     date: "2018",
     image: Card11image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -471,7 +481,7 @@ const cardsData = [
     media: "hindustan times",
     date: "2018",
     image: Card12image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -479,7 +489,7 @@ const cardsData = [
     media: "hindustan times",
     date: "2018",
     image: Card13image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -487,7 +497,7 @@ const cardsData = [
     media: "hindustan times",
     date: "2018",
     image: Card14image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -495,7 +505,7 @@ const cardsData = [
     media: "hindustan times",
     date: "2018",
     image: Card15image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -503,7 +513,7 @@ const cardsData = [
     media: "hindustan times",
     date: "2018",
     image: Card16image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -544,7 +554,7 @@ const cardsData = [
     media: "hindustan times",
     date: "2021",
     image: Card21image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -600,7 +610,7 @@ const cardsData = [
     media: "Hindustan Times",
     date: "2023",
     image: Card27image,
-    logo: "",
+    logo: hindustantimesNEWS,
   },
   {
     type: "modal",
@@ -673,6 +683,14 @@ const MediaPresence = () => {
           className="reviews-right-card"
           onClick={() => handleModalOpen(card.title, card.image, card.logo)}
         >
+          {card.logo && (
+              <img
+                src={card.logo}
+                alt="Logo"
+                className="modal-logo"
+                style={{ width: "80px", marginBottom: "10px" }}
+              />
+            )}
           <h4>{card.title}</h4>
           <div className="box-paragraph">
             <p>{card.media}</p>
@@ -689,6 +707,14 @@ const MediaPresence = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
+          {card.logo && (
+              <img
+                src={card.logo}
+                alt="Logo"
+                className="modal-logo"
+                style={{ width: "80px", marginBottom: "10px" }}
+              />
+            )}
           <h4>{card.title}</h4>
           <div className="box-paragraph">
             <p>{card.media}</p>
@@ -705,6 +731,14 @@ const MediaPresence = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
+          {card.logo && (
+              <img
+                src={card.logo}
+                alt="Logo"
+                className="modal-logo"
+                style={{ width: "80px", marginBottom: "10px" }}
+              />
+            )}
           <h4>{card.title}</h4>
           <div className="box-paragraph">
             <p>{card.media}</p>

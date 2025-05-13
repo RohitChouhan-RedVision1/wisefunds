@@ -3,7 +3,7 @@ import Title from '../Title/Title'
 import c from "../../Images/3.png"
 import d from "../../Images/4.png"
 import s1 from "../../Images/a.png"
-import s2 from "../../Images/c.png"
+import s2 from "../../Images/2.png"
 import "../Harness/Harness.scss"
 // import { useSpring, animated } from 'react-spring';
 import mascot from "../../Images/WFS Mascot.png"
